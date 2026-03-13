@@ -1,0 +1,6 @@
+- [ ] Add a github link in navBar and footer.
+- [ ] Rewrite the tutorial classification.
+- [ ] Refactor the editing functionality to enable in-site editing.
+- [ ] Change icon
+- [ ] Implement search
+- [ ] Encapsulate components (especially buttons)
