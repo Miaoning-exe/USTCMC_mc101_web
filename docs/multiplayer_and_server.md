@@ -1,7 +1,7 @@
 <!-- 
 Author:     Lylighte
 Date:       2025/11/01
-Title:      Multiplayer and Host Server
+Title:      局域网联机与架设服务器
  -->
 
 # 局域网联机 & 架设服务器
@@ -29,5 +29,7 @@ Title:      Multiplayer and Host Server
 ### 利用校园网联机
 
 利用 USTC 校园网进行 Minecraft 联机。该内容位于 USTC Minecraft Wiki 校内站，如果你可以访问这个网站，说明你具备使用校园网联机的条件。
+
+> https://wiki.ustcmc.com:5500/%E5%88%A9%E7%94%A8%E6%A0%A1%E5%9B%AD%E7%BD%91%E8%BF%9B%E8%A1%8C%E8%81%94%E6%9C%BA
 
 ## 架设服务器
