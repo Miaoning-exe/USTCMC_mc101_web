@@ -12,7 +12,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'USTC-MC101',
   tagline: 'A comprehensive Minecraft beginner\'s tutorial',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/icon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -106,7 +106,8 @@ const config = {
       navbar: {
         logo: {
           alt: 'USTC-MC101 Logo',
-          src: 'img/logo.svg',
+          src: 'img/logo.png',
+          href: '/',
         },
         items: [
           { label: '主页', to: '/', position: 'left' },

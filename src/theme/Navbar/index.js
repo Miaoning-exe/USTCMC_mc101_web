@@ -13,18 +13,30 @@
 
 import React, { useState } from 'react';
 import Link from '@docusaurus/Link';
-import { Pickaxe, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import NavbarButton from '../../components/Button/Button';
 import { useThemeConfig } from '@docusaurus/theme-common';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 
 
 function BrandLogo() {
+  const { navbar } = useThemeConfig();
+  const logo = navbar.logo;
+  const logoUrl = useBaseUrl(logo?.src);
+
   return (
     <div className="flex items-center gap-3">
-      <div className="w-10 h-10 bg-emerald-500 border-2 border-black shadow-[2px_2px_0_0_rgba(0,0,0,1)] flex items-center justify-center transform rotate-3">
-        <Pickaxe size={24} className="text-white" />
-      </div>
+      {logo && logoUrl && (
+        <Link to={logo.href || '/'} className="flex items-center">
+          <img 
+            src={logoUrl} 
+            alt={logo.alt || 'Logo'} 
+            className="w-12 h-12 object-contain" 
+          />
+        </Link>
+      )}
+
       <Link to="/" className="font-black text-2xl tracking-tight uppercase hover:no-underline text-black">
         USTC<span className="text-emerald-600">MC101</span>
       </Link>
