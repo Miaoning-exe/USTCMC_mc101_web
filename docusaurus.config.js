@@ -36,8 +36,8 @@ const config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'zh-Hans',
+    locales: ['zh-Hans'],
   },
 
   presets: [
@@ -82,27 +82,51 @@ const config = {
       colorMode: {
         respectPrefersColorScheme: true,
       },
+      // navbar: {
+      //   title: 'MC101',
+      //   logo: {
+      //     alt: 'My Site Logo',
+      //     src: 'img/logo.svg',
+      //   },
+      //   items: [
+      //     {
+      //       type: 'docSidebar',
+      //       sidebarId: 'tutorialSidebar',
+      //       position: 'left',
+      //       label: '文档',
+      //     },
+      //     // {to: '/blog', label: 'Blog', position: 'left'},
+      //     {
+      //       href: 'https://github.com/Miaoning-exe/USTCMC_mc101_web',
+      //       label: 'GitHub',
+      //       position: 'right',
+      //     },
+      //   ],
+      // },
       navbar: {
-        title: 'MC101',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'USTC-MC101 Logo',
           src: 'img/logo.svg',
         },
         items: [
+          { label: '主页', to: '/', position: 'left' },
+          { label: '教程文档', to: '/docs', position: 'left' },
+          { label: 'Wiki', href: 'https://wiki.ustcmc.com:5500/', position: 'left' },
+          
+          // Custom button item
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: '文档',
-          },
-          // {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            href: 'https://github.com/Miaoning-exe/USTCMC_mc101_web',
-            label: 'GitHub',
-            position: 'right',
+            label: '社团主页',
+            href: 'https://www.ustcmc.com/lobby',
+            position: 'right', 
+            customProps: {
+              isButton: true,         
+              color: 'bg-amber-300'  
+            }
           },
         ],
       },
+
+    
       footer: {
         style: 'dark',
         links: [

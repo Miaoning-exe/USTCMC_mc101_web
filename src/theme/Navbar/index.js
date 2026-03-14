@@ -15,13 +15,8 @@ import React, { useState } from 'react';
 import Link from '@docusaurus/Link';
 import { Pickaxe, Menu, X } from 'lucide-react';
 import NavbarButton from '../../components/Button/Button';
+import { useThemeConfig } from '@docusaurus/theme-common';
 
-// Config of navbar items
-const NAV_ITEMS = [
-  { label: '主页', to: '/' },
-  { label: '教程文档', to: '/docs' },
-  { label: 'Wiki', href: 'https://wiki.ustcmc.com:5500/' },
-];
 
 
 function BrandLogo() {
@@ -39,31 +34,35 @@ function BrandLogo() {
 
 
 
-function DesktopMenu() {
+function DesktopMenu({ items }) {
   return (
     <div className="hidden md:flex items-center space-x-8 font-bold">
-      {/* normal links */}
-       {NAV_ITEMS.map((item, index) => (
-        item.to ? (
+      {items.map((item, index) => {
+        // If `customProps.isButton` is specified in the configuration, it will be rendered as a button
+        if (item.customProps?.isButton) {
+          return (
+            <NavbarButton 
+              key={index}
+              to={item.to || item.href} 
+              text={item.label} 
+              color={item.customProps.color} 
+            />
+          );
+        }
+
+        // Otherwise, render it as a normal link
+        return item.to ? (
           <Link key={index} to={item.to} className="hover:text-emerald-600 transition-colors text-black hover:no-underline">
             {item.label}
           </Link>
         ) : (
-          <a key={index} href={item.href} className="hover:text-emerald-600 transition-colors text-black hover:no-underline">
+          <a key={index} href={item.href} target="_blank" rel="noopener noreferrer" className="hover:text-emerald-600 transition-colors text-black hover:no-underline">
             {item.label}
           </a>
-        )
-      ))}
-
-      <NavbarButton
-        href="https://www.ustcmc.com/lobby"
-        text="社团主页"
-        color="bg-amber-300"
-        width="w-auto"
-        height="h-auto"
-      />
+        );
+      })}
     </div>
-  )
+  );
 }
 
 
@@ -79,33 +78,37 @@ function MobileToggleButton({ isMenuOpen, toggle }) {
 }
 
 
-function MobileDropdown() {
+function MobileDropdown({ items }) {
   return (
     <div className="md:hidden border-t-4 border-black bg-white p-4 font-bold flex flex-col gap-4">
-      {/* normal links */}
-      {NAV_ITEMS.map((item, index) => (
-        item.to ? (
-          <Link key={index} to={item.to} className="hover:text-emerald-600 transition-colors text-black hover:no-underline">
+      {items.map((item, index) => {
+        // If button
+        if (item.customProps?.isButton) {
+          return (
+             <NavbarButton 
+              key={index}
+              to={item.to || item.href} 
+              text={item.label} 
+              color={item.customProps.color} 
+              className="w-full mt-2"
+            />
+          );
+        }
+
+        // Otherwise, render it as a normal link
+        return item.to ? (
+          <Link key={index} to={item.to} className="block py-2 border-b-2 border-gray-200 text-black hover:no-underline">
             {item.label}
           </Link>
         ) : (
-          <a key={index} href={item.href} className="hover:text-emerald-600 transition-colors text-black hover:no-underline">
+          <a key={index} href={item.href} className="block py-2 border-b-2 border-gray-200 text-black hover:no-underline">
             {item.label}
           </a>
-        )
-      ))}
-
-      <NavbarButton
-        href="https://www.ustcmc.com/lobby"
-        text="社团主页"
-        color="bg-amber-300"
-        width="w-auto"
-        height="h-auto"
-      />
+        );
+      })}
     </div>
-  )
+  );
 }
-
 
 function NavbarLayout({children}) {
   return (
@@ -118,19 +121,21 @@ function NavbarLayout({children}) {
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { navbar } = useThemeConfig();
+  const items = navbar.items;
 
   return (
     <nav className="navbar !block border-b-4 border-black bg-white p-0 sticky top-0 z-50 font-sans text-zinc-900">
       <NavbarLayout>
         <div className="navbar__inner flex items-center justify-between px-4 py-3">
           <BrandLogo />
-          <DesktopMenu />
+          <DesktopMenu items={items}/>
           <MobileToggleButton isMenuOpen={isMenuOpen} toggle={() => setIsMenuOpen(!isMenuOpen)} />
         </div>
       </NavbarLayout>
 
       {/* Mobile Drop Down */}
-      {isMenuOpen && <MobileDropdown />}
+      {isMenuOpen && <MobileDropdown items={items} />}
     
     </nav>
   );

@@ -2,7 +2,7 @@ import Link from '@docusaurus/Link';
 import React, { useState } from 'react';
 
 export default function Button ({
-    href, 
+    to, 
     text, 
     color = 'bg-amber-300',
     width = 'w-auto',
@@ -11,7 +11,7 @@ export default function Button ({
 }) {
     return (
        <Link
-        to={href}
+        to={to}
         className={`
             ${color} ${width} ${height} ${className}
             inline-flex items-center justify-center
