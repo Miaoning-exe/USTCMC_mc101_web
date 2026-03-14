@@ -12,6 +12,7 @@ import {
   Swords,
   Hammer
 } from 'lucide-react';
+import HeroButton from '../Button/HeroButton';
 
 const Homepage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -53,10 +54,13 @@ const Homepage = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button className="w-full sm:w-auto flex items-center justify-center gap-2 bg-emerald-400 text-black px-8 py-4 text-lg font-black border-4 border-black shadow-[6px_6px_0_0_rgba(0,0,0,1)] hover:translate-y-[3px] hover:translate-x-[3px] hover:shadow-[3px_3px_0_0_rgba(0,0,0,1)] transition-all">
-              <BookOpen size={24} />
-              开始学习
-            </button>
+            <HeroButton
+              onClick={() => window.location.href = '/docs'}
+              text="浏览教程"
+              icon={<BookOpen size={20} />}
+              color="bg-emerald-400"
+            />
+            
             <div className="w-full sm:w-auto relative group">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                 <Search size={20} className="text-zinc-500" />

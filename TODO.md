@@ -4,3 +4,4 @@
 - [ ] Change icon
 - [ ] Implement search
 - [ ] Encapsulate components (especially buttons)
+- [ ] Rewrite README.md
