@@ -47,26 +47,9 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/Miaoning-exe/USTCMC_mc101_web/tree/main/',
         },
-        // blog: {
-        //   showReadingTime: true,
-        //   feedOptions: {
-        //     type: ['rss', 'atom'],
-        //     xslt: true,
-        //   },
-        //   // Please change this to your repo.
-        //   // Remove this to remove the "edit this page" links.
-        //   editUrl:
-        //     'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        //   // Useful options to enforce blogging best practices
-        //   onInlineTags: 'warn',
-        //   onInlineAuthors: 'warn',
-        //   onUntruncatedBlogPosts: 'warn',
-        // },
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -82,28 +65,8 @@ const config = {
       colorMode: {
         respectPrefersColorScheme: true,
       },
-      // navbar: {
-      //   title: 'MC101',
-      //   logo: {
-      //     alt: 'My Site Logo',
-      //     src: 'img/logo.svg',
-      //   },
-      //   items: [
-      //     {
-      //       type: 'docSidebar',
-      //       sidebarId: 'tutorialSidebar',
-      //       position: 'left',
-      //       label: '文档',
-      //     },
-      //     // {to: '/blog', label: 'Blog', position: 'left'},
-      //     {
-      //       href: 'https://github.com/Miaoning-exe/USTCMC_mc101_web',
-      //       label: 'GitHub',
-      //       position: 'right',
-      //     },
-      //   ],
-      // },
       navbar: {
+        title: 'USTC MC101',
         logo: {
           alt: 'USTC-MC101 Logo',
           src: 'img/logo.png',
@@ -114,15 +77,18 @@ const config = {
           { label: '教程文档', to: '/docs', position: 'left' },
           { label: 'Wiki', href: 'https://wiki.ustcmc.com:5500/', position: 'left' },
           
-          // Custom button item
+          /**
+           * @deprecated
+           * Custom button item
+           */
           {
             label: '社团主页',
             href: 'https://www.ustcmc.com/lobby',
             position: 'right', 
-            customProps: {
-              isButton: true,         
-              color: 'bg-amber-300'  
-            }
+            // customProps: {
+            //   isButton: true,         
+            //   color: 'bg-amber-300'  
+            // }
           },
         ],
       },
@@ -160,10 +126,6 @@ const config = {
           {
             title: 'More',
             items: [
-              // {
-              //   label: 'Blog',
-              //   to: '/blog',
-              // },
               {
                 label: 'GitHub',
                 href: 'https://github.com/Miaoning-exe/USTCMC_mc101_web',

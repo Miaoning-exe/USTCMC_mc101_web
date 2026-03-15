@@ -1,16 +1,13 @@
 import React, { useState } from 'react';
 import { 
   BookOpen, 
-  Pickaxe, 
   Zap, 
-  ShieldAlert, 
   ChevronRight, 
   Server, 
   Search,
-  Menu,
-  X,
   Swords,
-  Hammer
+  Hammer,
+  ArrowDownToLine
 } from 'lucide-react';
 import HeroButton from '../Button/HeroButton';
 
@@ -19,10 +16,10 @@ const Homepage = () => {
 
   // 模拟教程分类数据
   const categories = [
-    { id: 1, title: '基础生存', desc: '从撸树到末影龙，第一天的完美开局指南。', icon: <Swords size={32} />, color: 'bg-emerald-400' },
-    { id: 2, title: '红石科技', desc: '自动化农场、密码门与生电基础原理剖析。', icon: <Zap size={32} />, color: 'bg-red-400' },
-    { id: 3, title: '建筑美学', desc: '火柴盒改造计划，中世纪与现代风格建筑教学。', icon: <Hammer size={32} />, color: 'bg-amber-400' },
-    { id: 4, title: '服务器规则', desc: '新手必读：小镇规划、领地划分与防熊指南。', icon: <ShieldAlert size={32} />, color: 'bg-cyan-400' },
+    { id: 1, title: '游戏安装', desc: '从0开始的Minecraft之旅', icon: <ArrowDownToLine size={32} />, color: 'bg-cyan-400' },
+    { id: 2, title: '基础生存', desc: '从撸树到末影龙，第一天的完美开局指南。', icon: <Swords size={32} />, color: 'bg-colorset-primary' },
+    { id: 3, title: '红石科技', desc: '自动化农场、密码门与生电基础原理剖析。', icon: <Zap size={32} />, color: 'bg-red-400' },
+    { id: 4, title: '建筑美学', desc: '火柴盒改造计划，中世纪与现代风格建筑教学。', icon: <Hammer size={32} />, color: 'bg-amber-400' },
   ];
 
   // 模拟最新文章数据
@@ -38,7 +35,7 @@ const Homepage = () => {
       {/* Hero 头部区域*/}
       <header className="relative py-20 lg:py-32 overflow-hidden border-b-4 border-black">
         {/* 背景装饰方块 */}
-        <div className="absolute top-10 left-10 w-24 h-24 bg-emerald-400 border-4 border-black opacity-20 transform -rotate-6"></div>
+        <div className="absolute top-10 left-10 w-24 h-24 bg-colorset-primary border-4 border-black opacity-20 transform -rotate-6"></div>
         <div className="absolute bottom-10 right-10 w-32 h-32 bg-amber-600 border-4 border-black opacity-20 transform rotate-12"></div>
         <div className="absolute top-1/2 right-1/4 w-16 h-16 bg-cyan-400 border-4 border-black opacity-20 transform rotate-45"></div>
         
@@ -47,7 +44,8 @@ const Homepage = () => {
             USTCMC | MC101
           </div>
           <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight tracking-tight text-black">
-            你的 <span className="text-emerald-500 bg-emerald-100 px-2 border-4 border-black inline-block transform rotate-1 shadow-[4px_4px_0_0_rgba(0,0,0,1)]">Minecraft</span> <br className="hidden md:block"/> 生存指南与知识库。
+            你的 <span className="text-colorset-primaryDark bg-colorset-primaryLightest px-2 border-4 border-black inline-block transform rotate-1 shadow-[4px_4px_0_0_rgba(0,0,0,1)]">Minecraft</span> <br className="hidden md:block"/> 
+            生存指南与知识库。
           </h1>
           <p className="text-lg md:text-xl text-zinc-700 mb-10 max-w-2xl mx-auto font-medium">
             这是由USTC Minecraft 社团维护的教程站。无论你是刚撸下第一块木头的新手，还是精通生电的大佬，这里都有属于你的营地。
@@ -58,7 +56,7 @@ const Homepage = () => {
               onClick={() => window.location.href = '/docs'}
               text="浏览教程"
               icon={<BookOpen size={20} />}
-              color="bg-emerald-400"
+              color="bg-colorset-primary"
             />
             
             <div className="w-full sm:w-auto relative group">
@@ -93,7 +91,7 @@ const Homepage = () => {
               </div>
               <h3 className="text-2xl font-black mb-3">{category.title}</h3>
               <p className="text-zinc-600 font-bold mb-6 flex-1">{category.desc}</p>
-              <div className="flex items-center font-black text-emerald-600 group-hover:text-emerald-800 uppercase mt-auto">
+              <div className="flex items-center font-black text-colorset-primaryDarker group-hover:text-emerald-800 uppercase mt-auto">
                 查阅教程 <ChevronRight size={20} className="ml-1 group-hover:translate-x-2 transition-transform" />
               </div>
             </div>
@@ -137,14 +135,14 @@ const Homepage = () => {
           {/* 服务器状态面板 */}
           <div className="bg-zinc-900 border-4 border-black p-6 text-white shadow-[8px_8px_0_0_rgba(16,185,129,1)]">
             <div className="flex items-center gap-3 mb-6 border-b-2 border-zinc-700 pb-4">
-              <Server size={28} className="text-emerald-400" />
+              <Server size={28} className="text-colorset-primary" />
               <h3 className="text-2xl font-black pt-3">服务器信息</h3>
             </div>
             
             <div className="space-y-4 font-bold">
               <div className="flex justify-between items-center">
                 <span className="text-zinc-400">服务器名</span>
-                <span className="bg-emerald-500 text-black px-2 py-0.5 border-2 border-black">114514th</span>
+                <span className="bg-colorset-primaryDark text-black px-2 py-0.5 border-2 border-black">114514th</span>
               </div>
               <div className="flex justify-between items-center">
                 <span className="text-zinc-400">在线玩家</span>
@@ -152,14 +150,14 @@ const Homepage = () => {
               </div>
               <div className="flex justify-between items-center">
                 <span className="text-zinc-400">服务器 TPS</span>
-                <span className="text-emerald-400">20.0 (流畅)</span>
+                <span className="text-colorset-primary">20.0 (流畅)</span>
               </div>
               
               <div className="pt-4 mt-4 border-t-2 border-zinc-700">
                 <p className="text-xs text-zinc-400 mb-2">点击复制服务器 IP</p>
                 <button 
                   onClick={() => alert('IP已复制: 114514.ustcmc.com')}
-                  className="w-full bg-black border-2 border-zinc-600 hover:border-emerald-400 p-3 font-mono text-center transition-colors text-emerald-300"
+                  className="w-full bg-black border-2 border-zinc-600 hover:border-colorset-primary p-3 font-mono text-center transition-colors text-colorset-primaryLight"
                 >
                   114514.ustcmc.com
                 </button>
@@ -171,7 +169,7 @@ const Homepage = () => {
           <div className="bg-cyan-100 border-4 border-black p-6 shadow-[8px_8px_0_0_rgba(0,0,0,1)]">
              <h3 className="text-2xl font-black mb-3">一起编写教程！</h3>
              <p className="text-zinc-700 font-bold mb-6">发现教程有误？或者想分享你的独家红石机器？本教程欢迎所有玩家参与共建。</p>
-             <button className="bg-white border-2 border-black px-4 py-2 font-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] w-full hover:bg-emerald-100 transition-colors">
+             <button className="bg-white border-2 border-black px-4 py-2 font-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] w-full hover:bg-colorset-primaryLightest transition-colors">
                申请成为编辑者
              </button>
           </div>

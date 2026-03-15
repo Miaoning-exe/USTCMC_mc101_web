@@ -12,7 +12,19 @@ module.exports = {
   },
   
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        colorset: {
+          primary: 'var(--colorset-primary)',
+          primaryDark: 'var(--colorset-primary-dark)',
+          primaryDarker: 'var(--colorset-primary-darker)',
+          primaryDarkest: 'var(--colorset-primary-darkest)',
+          primaryLight: 'var(--colorset-primary-light)',
+          primaryLighter: 'var(--colorset-primary-lighter)',
+          primaryLightest: 'var(--colorset-primary-lightest)',
+        },
+      }
+    },
   },
   plugins: [],
 }

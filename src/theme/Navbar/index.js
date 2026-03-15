@@ -17,12 +17,16 @@ import { Menu, X } from 'lucide-react';
 import NavbarButton from '../../components/Button/Button';
 import { useThemeConfig } from '@docusaurus/theme-common';
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import NavbarColorModeToggle from '@theme/Navbar/ColorModeToggle';
+import { usePageSkin } from '../../hooks/usePageSkin';
 
 
 
 function BrandLogo() {
   const { navbar } = useThemeConfig();
   const logo = navbar.logo;
+  const title = navbar.title || 'USTC MC101'; 
+  const [text0, text1] = title.split(' ');
   const logoUrl = useBaseUrl(logo?.src);
 
   return (
@@ -38,7 +42,7 @@ function BrandLogo() {
       )}
 
       <Link to="/" className="font-black text-2xl tracking-tight uppercase hover:no-underline text-black">
-        USTC<span className="text-emerald-600">MC101</span>
+        {text0} <span className="text-colorset-primaryDarker">{text1}</span>
       </Link>
     </div>
   );
@@ -64,15 +68,21 @@ function DesktopMenu({ items }) {
 
         // Otherwise, render it as a normal link
         return item.to ? (
-          <Link key={index} to={item.to} className="hover:text-emerald-600 transition-colors text-black hover:no-underline">
+          <Link key={index} to={item.to} className="hover:text-colorset-primaryDarker transition-colors text-black hover:no-underline">
             {item.label}
           </Link>
         ) : (
-          <a key={index} href={item.href} target="_blank" rel="noopener noreferrer" className="hover:text-emerald-600 transition-colors text-black hover:no-underline">
+          <a key={index} href={item.href} target="_blank" rel="noopener noreferrer" className="hover:text-colorset-primaryDarker transition-colors text-black hover:no-underline">
             {item.label}
           </a>
         );
       })}
+
+      <SkinPicker />
+
+      <div className="pl-4 border-l-2 border-zinc-200 flex items-center">
+        <NavbarColorModeToggle />
+      </div>
     </div>
   );
 }
@@ -81,8 +91,12 @@ function DesktopMenu({ items }) {
 function MobileToggleButton({ isMenuOpen, toggle }) {
   return (
     <div className="md:hidden flex items-center">
+      <div className="mr-4">
+         <NavbarColorModeToggle />
+      </div>
+
       <button onClick={toggle} 
-        className="p-2 border-2 border-black bg-gray-100 hover:translate-y-[2px] hover:translate-x-[2px] hover:shadow-[0px_0px_0_0_rgba(0,0,0,1)] cursor-pointer transition-all shadow-[2px_2px_0_0_rgba(0,0,0,1)]">
+        className="pt-1 border-0 bg-transparent cursor-pointer">
         {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
       </button>
     </div>
@@ -121,6 +135,38 @@ function MobileDropdown({ items }) {
     </div>
   );
 }
+
+
+function SkinPicker() {
+  const { skin, changeSkin } = usePageSkin();
+
+  const skins = [
+    { id: 'emerald', name: '翠绿', color: 'bg-emerald-400' },
+    { id: 'skyBlue', name: '天蓝', color: 'bg-[#25799d]' },
+  ];
+
+  return (
+    <div className="flex items-center gap-2">
+      {skins.map((s) => (
+        <button
+          key={s.id}
+          title={s.name}
+          onClick={() => changeSkin(s.id)}
+          className={`
+            w-5 h-5 border-2 border-black cursor-pointer transition-transform
+            ${s.color}
+            ${skin === s.id 
+              ? 'translate-y-[2px] translate-x-[2px] shadow-none' // 选中时的按压状态
+              : 'shadow-[2px_2px_0_0_rgba(0,0,0,1)] hover:-translate-y-[1px]' // 未选中时的浮起状态
+            }
+          `}
+        />
+      ))}
+    </div>
+  );
+}
+
+
 
 function NavbarLayout({children}) {
   return (
