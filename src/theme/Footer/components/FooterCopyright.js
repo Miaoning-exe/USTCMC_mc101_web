@@ -10,7 +10,7 @@ export default function FooterCopyright() {
                     href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-zinc-400 hover:text-emerald-400 underline decoration-zinc-600 hover:decoration-emerald-400 underline-offset-4 transition-all"
+                    className="text-zinc-400 hover:text-colorset-primaryDark underline decoration-zinc-600 hover:decoration-colorset-primaryDark underline-offset-4 transition-all"
                 >
                     CC BY-SA 4.0 国际许可协议
                 </a>

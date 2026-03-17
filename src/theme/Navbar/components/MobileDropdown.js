@@ -2,6 +2,10 @@ import React from 'react';
 import Link from '@docusaurus/Link';
 import NavbarButton from '../../../components/Button/Button';
 
+/**
+ * Configurable at docusaurus.config.js
+ * config.themeConfig.navbar.items
+ */
 export default function MobileDropdown({ items }) {
     return (
         <div className="md:hidden border-t-4 border-black bg-white p-4 font-bold flex flex-col gap-4">

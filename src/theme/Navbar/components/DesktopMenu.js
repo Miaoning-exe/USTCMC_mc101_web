@@ -4,6 +4,10 @@ import NavbarColorModeToggle from '@theme/Navbar/ColorModeToggle';
 import NavbarButton from '../../../components/Button/Button';
 import GithubButton from './Github';
 
+/**
+ * Configurable at docusaurus.config.js
+ * config.themeConfig.navbar.items
+ */
 export default function DesktopMenu({ items }) {
     return (
         <div className="px-4 hidden md:flex items-center space-x-8 font-bold">

@@ -2,6 +2,10 @@ import React from 'react';
 import BrandLogo from '../../../components/BrandLogo';
 import { useThemeConfig } from '@docusaurus/theme-common';
 
+/**
+ * Configurable at docusaurus.config.js
+ * config.themeConfig.footer.description
+ */
 export default function FooterBrand() {
     const { footer } = useThemeConfig();
     const description = footer?.description;

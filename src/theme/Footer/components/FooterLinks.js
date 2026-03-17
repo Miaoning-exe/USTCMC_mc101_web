@@ -2,6 +2,10 @@ import React from 'react';
 import Link from '@docusaurus/Link';
 import { useThemeConfig } from '@docusaurus/theme-common';
 
+/**
+ * Configurable at docusaurus.config.js
+ * config.themeConfig.footer.links
+ */
 export default function FooterLinks() {
     const { footer } = useThemeConfig();
     if (!footer || !footer.links) {

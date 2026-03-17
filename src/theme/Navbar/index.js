@@ -1,14 +1,3 @@
-// import React from 'react';
-// import NavbarLayout from '@theme/Navbar/Layout';
-// import NavbarContent from '@theme/Navbar/Content';
-// export default function Navbar() {
-//   return (
-//     <NavbarLayout>
-//       <NavbarContent />
-//     </NavbarLayout>
-//   );
-// }
-
 import React, { useState } from 'react';
 import { useThemeConfig } from '@docusaurus/theme-common';
 import BrandLogo from '../../components/BrandLogo';

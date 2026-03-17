@@ -43,7 +43,7 @@ export default function Sidebar() {
         <h3 className="text-2xl font-black mb-3">一起编写教程！</h3>
         <p className="text-zinc-700 font-bold mb-6">发现教程有误？或者想分享你的独家红石机器？本教程欢迎所有玩家参与共建。</p>
         <HomepageButton
-          onClick={() => window.location.href = '/docs'}
+          onClick={() => window.location.href = '/contact'}
           text="申请成为编辑者"
         />
       </div>

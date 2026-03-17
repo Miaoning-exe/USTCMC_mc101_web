@@ -1,6 +1,9 @@
 import React from 'react';
 import { usePageSkin } from '../../../hooks/usePageSkin';
 
+/**
+ * @deprecated
+ */
 export default function SkinPicker() {
     const { skin, changeSkin } = usePageSkin();
 
