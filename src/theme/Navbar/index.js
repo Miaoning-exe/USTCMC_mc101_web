@@ -11,7 +11,7 @@
 
 import React, { useState } from 'react';
 import { useThemeConfig } from '@docusaurus/theme-common';
-import BrandLogo from './components/BrandLogo';
+import BrandLogo from '../../components/BrandLogo';
 import DesktopMenu from './components/DesktopMenu';
 import MobileToggleButton from './components/MobileToggleButton';
 import MobileDropdown from './components/MobileDropdown';

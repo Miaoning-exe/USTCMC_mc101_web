@@ -4,7 +4,7 @@
  * work well for content-centric websites.
  */
 
- 
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -38,7 +38,9 @@
 
 /* Colorset */
 @layer base {
-    :root, [data-page-skin='emerald'] {
+
+  :root,
+  [data-page-skin='emerald'] {
     --colorset-primary: theme('colors.emerald.400');
     --colorset-primary-dark: theme('colors.emerald.500');
     --colorset-primary-darker: theme('colors.emerald.600');
