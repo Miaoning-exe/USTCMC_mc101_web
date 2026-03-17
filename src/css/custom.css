@@ -39,7 +39,6 @@
 /* Colorset */
 @layer base {
 
-  :root,
   [data-page-skin='emerald'] {
     --colorset-primary: theme('colors.emerald.400');
     --colorset-primary-dark: theme('colors.emerald.500');
@@ -51,9 +50,10 @@
 
     --colorset-shadow-primary: rgba(0, 0, 0, 1);
     --colorset-shadow-title0: rgba(16, 185, 129, 1);
+    --colorset-shadow-serverInfoCard: rgba(16, 185, 129, 1);
   }
 
-  [data-page-skin='skyBlue'] {
+  root [data-page-skin='skyBlue'] {
     --colorset-primary: #6bcce7;
     --colorset-primary-dark: #2595c5;
     --colorset-primary-darker: #25789c;
@@ -61,6 +61,10 @@
     --colorset-primary-light: #4fa3c6;
     --colorset-primary-lighter: #78b7d2;
     --colorset-primary-lightest: #def1fa;
+
+    --colorset-shadow-primary: rgba(0, 0, 0, 1);
+    --colorset-shadow-title0: rgb(23, 148, 190, 1);
+    --colorset-shadow-serverInfoCard: rgb(23, 148, 190, );
   }
 }
 

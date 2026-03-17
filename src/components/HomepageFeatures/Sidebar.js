@@ -5,7 +5,7 @@ export default function Sidebar() {
   return (
     <div className="flex flex-col gap-8">
       {/* 服务器状态面板 */}
-      <div className="bg-zinc-900 border-4 border-black p-6 text-white shadow-[8px_8px_0_0_rgba(16,185,129,1)]">
+      <div className="bg-zinc-900 border-4 border-black p-6 text-white shadow-serverInfoCard">
         <div className="flex items-center gap-3 mb-6 border-b-2 border-zinc-700 pb-4">
           <Server size={28} className="text-colorset-primary" />
           <h3 className="text-2xl font-black pt-3">服务器信息</h3>

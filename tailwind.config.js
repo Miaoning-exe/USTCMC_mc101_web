@@ -32,6 +32,7 @@ module.exports = {
         'brutal-xl': '8px 8px 0 0 var(--colorset-shadow-primary, #000)',
 
         'title0': '4px 4px 0 0 var(--colorset-shadow-title0, #000)',
+        'serverInfoCard': '8px 8px 0 0 var(--colorset-shadow-serverInfoCard, #000)',
       }
     },
   },
