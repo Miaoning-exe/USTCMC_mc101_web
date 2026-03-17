@@ -6,7 +6,7 @@ export default function HeroSection() {
   return (
     <header className="relative py-20 lg:py-32 overflow-hidden border-b-4 border-black">
       {/* 背景装饰方块 */}
-      <div className="absolute top-10 left-10 w-24 h-24 bg-colorset-primary border-4 border-black opacity-20 transform -rotate-6"></div>
+      <div className="absolute top-10 left-10 w-24 h-24 bg-emerald-400 border-4 border-black opacity-20 transform -rotate-6"></div>
       <div className="absolute bottom-10 right-10 w-32 h-32 bg-amber-600 border-4 border-black opacity-20 transform rotate-12"></div>
       <div className="absolute top-1/2 right-1/4 w-16 h-16 bg-cyan-400 border-4 border-black opacity-20 transform rotate-45"></div>
 

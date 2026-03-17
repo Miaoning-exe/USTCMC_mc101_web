@@ -4,7 +4,7 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -60,11 +60,6 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
-      colorMode: {
-        respectPrefersColorScheme: true,
-      },
       navbar: {
         title: 'USTC MC101',
         logo: {
@@ -76,15 +71,10 @@ const config = {
           { label: '主页', to: '/', position: 'left' },
           { label: '教程文档', to: '/docs', position: 'left' },
           { label: 'Wiki', href: 'https://wiki.ustcmc.com:5500/', position: 'left' },
-          
-          /**
-           * @deprecated
-           * Custom button item
-           */
           {
             label: '社团主页',
             href: 'https://www.ustcmc.com/lobby',
-            position: 'right', 
+            position: 'right',
             // customProps: {
             //   isButton: true,         
             //   color: 'bg-amber-300'  
@@ -93,49 +83,36 @@ const config = {
         ],
       },
 
-    
+
       footer: {
         style: 'dark',
+        description: '由USTC Minecraft 社团构建的综合版 Minecraft 教程与维基社区。生存，建造，探索，永不止步。',
         links: [
           {
-            title: 'Docs',
+            title: '友链',
             items: [
               {
-                label: '文档',
-                to: 'docs/launcher_tutorial',
+                label: 'NJU MC',
+                href: 'https://nmo.net.cn:25569/lobby',
               },
             ],
           },
           {
-            title: 'Community',
+            title: '社区',
             items: [
               {
-                label: '加入QQ群',
+                label: 'QQ 群',
                 to: '/contact',
               },
-              // {
-              //   label: 'Discord',
-              //   href: 'https://discordapp.com/invite/docusaurus',
-              // },
-              // {
-              //   label: 'X',
-              //   href: 'https://x.com/docusaurus',
-              // },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
               {
-                label: 'GitHub',
-                href: 'https://github.com/Miaoning-exe/USTCMC_mc101_web',
+                label: 'Bilibili 官方号',
+                href: 'https://space.bilibili.com/3546788017474530',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} USTCMC_mc101. Built with Docusaurus. <br />
-      本网站内容采用 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0 许可协议</a> `,
       },
+
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,

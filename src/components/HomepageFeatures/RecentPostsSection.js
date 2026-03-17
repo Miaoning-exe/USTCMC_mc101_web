@@ -1,4 +1,5 @@
 import React from 'react';
+import HomepageButton from '../Button/Button';
 
 export default function RecentPostsSection() {
   const recentPosts = [
@@ -31,9 +32,14 @@ export default function RecentPostsSection() {
           </a>
         ))}
       </div>
-      <button className="mt-8 border-4 border-black bg-zinc-100 px-6 py-3 font-black shadow-brutal-m hover:bg-zinc-200 transition-colors w-full sm:w-auto text-center">
-        查看所有归档
-      </button>
+      <HomepageButton
+        onClick={() => window.location.href = '/docs'}
+        text="查看所有归档"
+        color="bg-zinc-100"
+        width="w-full sm:w-auto"
+        height="h-auto"
+        className="mt-8"
+      />
     </div>
   );
 }

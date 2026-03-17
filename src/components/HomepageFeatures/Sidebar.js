@@ -1,5 +1,6 @@
 import React from 'react';
 import { Server } from 'lucide-react';
+import HomepageButton from '../Button/Button';
 
 export default function Sidebar() {
   return (
@@ -29,7 +30,7 @@ export default function Sidebar() {
             <p className="text-xs text-zinc-400 mb-2">点击复制服务器 IP</p>
             <button
               onClick={() => alert('IP已复制: 114514.ustcmc.com')}
-              className="w-full bg-black border-2 border-zinc-600 hover:border-colorset-primary p-3 font-mono text-center transition-colors text-colorset-primaryLight"
+              className="w-full bg-black border-2 border-zinc-600 hover:border-colorset-primary active:bg-zinc-900 active:scale-[0.99] p-3 font-mono text-center transition-all duration-100 ease-out text-colorset-primaryLight"
             >
               114514.ustcmc.com
             </button>
@@ -41,9 +42,10 @@ export default function Sidebar() {
       <div className="bg-cyan-100 border-4 border-black p-6 shadow-brutal-xl">
         <h3 className="text-2xl font-black mb-3">一起编写教程！</h3>
         <p className="text-zinc-700 font-bold mb-6">发现教程有误？或者想分享你的独家红石机器？本教程欢迎所有玩家参与共建。</p>
-        <button className="bg-white border-2 border-black px-4 py-2 font-black shadow-brutal-m w-full hover:bg-colorset-primaryLightest transition-colors">
-          申请成为编辑者
-        </button>
+        <HomepageButton
+          onClick={() => window.location.href = '/docs'}
+          text="申请成为编辑者"
+        />
       </div>
     </div>
   );

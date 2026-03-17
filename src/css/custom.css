@@ -53,9 +53,10 @@
     --colorset-shadow-serverInfoCard: rgba(16, 185, 129, 1);
   }
 
-  root [data-page-skin='skyBlue'] {
+  :root,
+  [data-page-skin='skyBlue'] {
     --colorset-primary: #6bcce7;
-    --colorset-primary-dark: #2595c5;
+    --colorset-primary-dark: #268fbd;
     --colorset-primary-darker: #25789c;
     --colorset-primary-darkest: #1e617e;
     --colorset-primary-light: #4fa3c6;
@@ -63,8 +64,8 @@
     --colorset-primary-lightest: #def1fa;
 
     --colorset-shadow-primary: rgba(0, 0, 0, 1);
-    --colorset-shadow-title0: rgb(23, 148, 190, 1);
-    --colorset-shadow-serverInfoCard: rgb(23, 148, 190, );
+    --colorset-shadow-title0: rgb(23, 130, 166);
+    --colorset-shadow-serverInfoCard: rgb(23, 130, 166);
   }
 }
 
