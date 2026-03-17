@@ -38,7 +38,7 @@
 
 /* Colorset */
 @layer base {
-  :root {
+    :root, [data-page-skin='emerald'] {
     --colorset-primary: theme('colors.emerald.400');
     --colorset-primary-dark: theme('colors.emerald.500');
     --colorset-primary-darker: theme('colors.emerald.600');
@@ -46,26 +46,19 @@
     --colorset-primary-light: theme('colors.emerald.300');
     --colorset-primary-lighter: theme('colors.emerald.200');
     --colorset-primary-lightest: theme('colors.emerald.100');
-  }
 
-  [data-page-skin='emerald'] {
-    --colorset-primary: theme('colors.emerald.400');
-    --colorset-primary-dark: theme('colors.emerald.500');
-    --colorset-primary-darker: theme('colors.emerald.600');
-    --colorset-primary-darkest: theme('colors.emerald.700');
-    --colorset-primary-light: theme('colors.emerald.300');
-    --colorset-primary-lighter: theme('colors.emerald.200');
-    --colorset-primary-lightest: theme('colors.emerald.100');
+    --colorset-shadow-primary: rgba(0, 0, 0, 1);
+    --colorset-shadow-title0: rgba(16, 185, 129, 1);
   }
 
   [data-page-skin='skyBlue'] {
-    --colorset-primary: #62d6f6;
+    --colorset-primary: #6bcce7;
     --colorset-primary-dark: #2595c5;
     --colorset-primary-darker: #25789c;
     --colorset-primary-darkest: #1e617e;
     --colorset-primary-light: #4fa3c6;
     --colorset-primary-lighter: #78b7d2;
-    --colorset-primary-lightest: #cfebf9;
+    --colorset-primary-lightest: #def1fa;
   }
 }
 

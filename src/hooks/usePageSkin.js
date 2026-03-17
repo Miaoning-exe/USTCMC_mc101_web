@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 
 export function usePageSkin() {
-  // 默认使用 emerald 皮肤
   const [skin, setSkin] = useState('emerald');
 
   useEffect(() => {
