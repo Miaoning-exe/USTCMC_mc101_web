@@ -3,10 +3,10 @@ import HomepageButton from '../Button/Button';
 
 export default function RecentPostsSection() {
   const recentPosts = [
-    { id: 1, title: '【红石】如何建造一个每小时产出10000+的刷铁机', tag: '红石科技', date: '2023-10-25' },
-    { id: 2, title: '【建筑】屋顶的10种搭法，告别火柴盒', tag: '建筑美学', date: '2023-10-22' },
-    { id: 3, title: '【生存】1.20版本村民交易所最优布局', tag: '基础生存', date: '2023-10-20' },
-    { id: 4, title: '【公告】第三赛季主城规划图及地皮认领说明', tag: '服务器动态', date: '2023-10-18' },
+    { id: 1, title: '【生电】如何建造一个每小时产出10000+的刷线机', tag: '红石科技', date: '2025-03-10' },
+    { id: 2, title: '【建筑】粉红色抽屉墙的建造教程', tag: '建筑美学', date: '2025-03-18' },
+    { id: 3, title: '【建筑】服务器地铁线路修建指南', tag: '建筑美学', date: '2023-10-20' },
+    { id: 4, title: '【公告】关于封禁玩家"xxxxx00025"的公告', tag: '服务器动态', date: '2025-03-19' },
   ];
 
   return (
@@ -34,7 +34,7 @@ export default function RecentPostsSection() {
       </div>
       <HomepageButton
         onClick={() => window.location.href = '/docs'}
-        text="查看所有归档"
+        text="查看所有文档"
         color="bg-zinc-100"
         width="w-full sm:w-auto"
         height="h-auto"

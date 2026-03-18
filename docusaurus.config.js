@@ -40,6 +40,12 @@ const config = {
     locales: ['zh-Hans'],
   },
 
+  customFields: {
+    footer: {
+      description: '由USTC Minecraft 社团构建的综合版 Minecraft 教程与维基社区。生存，建造，探索，永不止步。',
+    }
+  },
+
   presets: [
     [
       'classic',
@@ -86,13 +92,12 @@ const config = {
 
       footer: {
         style: 'dark',
-        description: '由USTC Minecraft 社团构建的综合版 Minecraft 教程与维基社区。生存，建造，探索，永不止步。',
         links: [
           {
             title: '友链',
             items: [
               {
-                label: 'NJU MC',
+                label: 'NMO',
                 href: 'https://nmo.net.cn:25569/lobby',
               },
             ],

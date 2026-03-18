@@ -1,4 +1,4 @@
-- [ ] Add a github link in navBar and footer.
+- [x] Add a github link in navBar and footer.
 - [x] Rewrite the tutorial classification.
 - [ ] Refactor the editing function to enable in-site editing.
 - [x] Change icon

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useThemeConfig } from '@docusaurus/theme-common';
-import BrandLogo from '../../components/BrandLogo';
+import NavbarLogo from '../../components/Logo/Logo';
 import DesktopMenu from './components/DesktopMenu';
 import MobileToggleButton from './components/MobileToggleButton';
 import MobileDropdown from './components/MobileDropdown';
@@ -15,7 +15,7 @@ export default function Navbar() {
     <nav className="navbar !block border-b-4 border-black bg-white p-0 sticky top-0 z-50 font-sans text-zinc-900">
       <NavbarLayout>
         <div className="navbar__inner flex items-center justify-between px-4 py-3">
-          <BrandLogo />
+          <NavbarLogo />
           <DesktopMenu items={items} />
           <MobileToggleButton isMenuOpen={isMenuOpen} toggle={() => setIsMenuOpen(!isMenuOpen)} />
         </div>
