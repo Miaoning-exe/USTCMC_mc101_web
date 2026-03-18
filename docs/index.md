@@ -1,3 +1,8 @@
+---
+title: "MC101"
+sidebar_position: 1
+---
+
 # USTC MC101 Tutorial
 
 > **关于本教程：**

@@ -3,9 +3,9 @@ import { ArrowDownToLine, Swords, Zap, Hammer, ChevronRight } from 'lucide-react
 
 export default function CategoriesSection() {
   const categories = [
-    { id: 1, title: '游戏安装', desc: '从0开始的Minecraft之旅', icon: <ArrowDownToLine size={32} />, color: 'bg-cyan-400' },
+    { id: 1, title: '游戏安装', desc: '从零开始的Minecraft之旅', icon: <ArrowDownToLine size={32} />, color: 'bg-cyan-400' },
     { id: 2, title: '基础生存', desc: '从撸树到末影龙，第一天的完美开局指南。', icon: <Swords size={32} />, color: 'bg-emerald-400' },
-    { id: 3, title: '红石科技', desc: '自动化农场、密码门与生电基础原理剖析。', icon: <Zap size={32} />, color: 'bg-red-400' },
+    { id: 3, title: '红石生电', desc: '自动化农场、刷怪塔与生电基础原理剖析。', icon: <Zap size={32} />, color: 'bg-red-400' },
     { id: 4, title: '建筑美学', desc: '火柴盒改造计划，中世纪与现代风格建筑教学。', icon: <Hammer size={32} />, color: 'bg-amber-400' },
   ];
 

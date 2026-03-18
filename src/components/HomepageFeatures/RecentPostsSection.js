@@ -17,7 +17,7 @@ export default function RecentPostsSection() {
 
       <div className="flex flex-col gap-6">
         {recentPosts.map((post) => (
-          <a key={post.id} href="#" className="block bg-white border-4 border-black p-4 sm:p-6 shadow-brutal-m hover:bg-emerald-50 hover:translate-y-[2px] hover:translate-x-[2px] hover:shadow-brutal-s transition-all">
+          <a key={post.id} href="#" className="block bg-white border-4 border-black p-4 sm:p-6 shadow-brutal-m hover:bg-emerald-50 hover:translate-y-[4px] hover:translate-x-[4px] hover:shadow-none transition-all">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <div>
                 <span className="inline-block bg-amber-200 text-amber-900 border-2 border-black px-2 py-1 text-sm font-bold mb-2">
